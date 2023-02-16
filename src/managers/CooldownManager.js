@@ -1,5 +1,6 @@
 const EconomyError = require('../classes/util/EconomyError')
 const errors = require('../structures/errors')
+const DatabaseManager = require('./DatabaseManager')
 
 
 /**
@@ -35,7 +36,7 @@ class CooldownManager {
          * @type {DatabaseManager}
          * @private
          */
-        this.database = database
+        this.database = new DatabaseManager(options)
     }
 
     /**
